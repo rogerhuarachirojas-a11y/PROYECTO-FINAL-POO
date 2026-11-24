@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 # ProductoPedido: una linea del pedido (producto + cantidad). Ejemplo: "2 x Silpancho".
 class ProductoPedido:
     def __init__(self, producto, cantidad):
@@ -40,4 +38,4 @@ class ProductoPedido:
     # Platos de la linea (si es un combo, cuenta los platos de adentro)
     def contar_platos(self):
         return self._producto.contar_platos() * self._cantidad
->>>>>>> c90222d7b7ff5f63a623ae0d48ad58ccc6192aa1
+
