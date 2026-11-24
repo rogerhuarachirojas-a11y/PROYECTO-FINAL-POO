@@ -11,7 +11,6 @@ class DetalleComboPedido:
     @property
     def producto(self):
         return self._producto
-
     @property
     def cantidad(self):
         return self._cantidad
