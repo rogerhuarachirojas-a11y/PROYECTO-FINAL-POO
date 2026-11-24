@@ -1,12 +1,4 @@
-from __future__ import annotations
-
 from abc import ABC, abstractmethod
-from typing import TYPE_CHECKING
-
-# Producto tiene un Combo (diagrama), pero Combo tambien usa Producto.
-# Para no crear un import circular, Combo se importa solo para los tipos.
-if TYPE_CHECKING:
-    from Combo import Combo
 
 
 # Producto: clase ABSTRACTA (hereda de ABC y tiene un @abstractmethod).
@@ -23,7 +15,7 @@ class Producto(ABC):
         self._precio = float(precio)
         self._disponible = disponible            # texto que describe cuando se sirve
         self._menu = list(menu) if menu else []  # menus donde aparece el producto
-        self._combo: Combo | None = None         # combo al que pertenece (si tiene)
+        self._combo = None                       # combo al que pertenece (si tiene)
 
     # ---- Propiedades ----
     @property
@@ -49,7 +41,7 @@ class Producto(ABC):
 
     # Lo usa Combo.agregar_producto para enlazar el producto con su combo
     @combo.setter
-    def combo(self, combo: Combo | None):
+    def combo(self, combo):
         self._combo = combo
 
     # ---- Validaciones ----
