@@ -38,3 +38,4 @@ class ProductoPedido:
     # Platos de la linea (si es un combo, cuenta los platos de adentro)
     def contar_platos(self):
         return self._producto.contar_platos() * self._cantidad
+
