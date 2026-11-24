@@ -6,7 +6,6 @@
 
 from Pago import Pago
 
-
 class PagoEnQR(Pago):
 
     # Lista COMPARTIDA por todos los pagos QR: guarda los códigos ya usados
