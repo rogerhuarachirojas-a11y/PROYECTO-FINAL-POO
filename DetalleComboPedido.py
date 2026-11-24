@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from __future__ import annotations
 
 from typing import TYPE_CHECKING
@@ -26,22 +27,40 @@ class DetalleComboPedido:
         self.cantidad = cantidad   # pasa por el setter, que valida el rango
 
     # ---- Propiedades ----
+=======
+# DetalleComboPedido: detalle de un producto (o combo) con su cantidad y precio.
+# Se relaciona solo con Producto.
+class DetalleComboPedido:
+    def __init__(self, producto, cantidad):
+        if not isinstance(cantidad, int) or cantidad < 1 or cantidad > 20:
+            raise ValueError("La cantidad debe ser un entero entre 1 y 20")
+        self._producto = producto
+        self._cantidad = cantidad
+        self._precio = round(producto.calcular_precio(), 2)
+
+>>>>>>> c90222d7b7ff5f63a623ae0d48ad58ccc6192aa1
     @property
     def producto(self):
         return self._producto
 
     @property
+<<<<<<< HEAD
     def id_pedido(self):
         return self._id_pedido
 
     @property
     def pedido(self):
         return self._pedido
+=======
+    def cantidad(self):
+        return self._cantidad
+>>>>>>> c90222d7b7ff5f63a623ae0d48ad58ccc6192aa1
 
     @property
     def precio(self):
         return self._precio
 
+<<<<<<< HEAD
     @property
     def cantidad(self):
         return self._cantidad
@@ -68,3 +87,13 @@ class DetalleComboPedido:
     # Texto de la linea para mostrar en el detalle del pedido
     def descripcion(self):
         return f"{self._cantidad} x {self._producto.nombre} - Bs {self.calcular_sub():.2f}"
+=======
+    def calcular_subtotal(self):
+        return round(self._precio * self._cantidad, 2)
+
+    def disponible(self, dia):
+        return self._producto.disponible(dia)
+
+    def contar_platos(self):
+        return self._producto.contar_platos() * self._cantidad
+>>>>>>> c90222d7b7ff5f63a623ae0d48ad58ccc6192aa1
