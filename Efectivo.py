@@ -12,7 +12,6 @@ class Efectivo(Pago):
     def __init__(self, pedido, monto):
         super().__init__(pedido, monto)   # El padre guarda pedido, monto y fecha
         self._cambio = Decimal("0.00")    # Atributo propio: el cambio empieza en 0
-
     @property
     def cambio(self):
         return self._cambio
