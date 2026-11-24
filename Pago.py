@@ -3,10 +3,8 @@
 from abc import ABC, abstractmethod          # ABC = clase abstracta
 from decimal import Decimal, ROUND_HALF_UP   # Decimal: dinero sin errores
 from datetime import date                    # Fecha del pago
-
 class Pago(ABC):
     """Molde de todos los pagos. No se puede crear un Pago directamente."""
-
     def __init__(self, pedido, monto):
         # El guion bajo _ significa "protegido": no se toca desde afuera.
         # Para leerlos usamos las @property de más abajo.

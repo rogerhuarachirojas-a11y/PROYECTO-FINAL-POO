@@ -1,8 +1,6 @@
 
 from Pago import Pago
-
 class PagoEnQR(Pago):
-
 
     _codigos_usados = set()
 
