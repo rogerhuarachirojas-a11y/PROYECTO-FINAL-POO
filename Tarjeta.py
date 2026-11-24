@@ -4,11 +4,9 @@ from Pago import Pago
 
 
 class Tarjeta(Pago):
-
     def __init__(self, pedido, monto):
         super().__init__(pedido, monto)
         self._Comision = Decimal("0.03")      # 0.03 = 3 %
-
     @property
     def Comision(self):
         return self._Comision
