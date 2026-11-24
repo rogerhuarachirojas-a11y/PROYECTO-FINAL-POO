@@ -5,24 +5,23 @@ from Pedido import Pedido
 class Llevar(Pedido):
     def __init__(self, id_pedido, cliente, fecha=None):
         super().__init__(id_pedido, cliente, fecha)
-        # Costo de cada envase en Bs
         # MODIFICAR AQUI si cambia el costo del envase
-        self._bs_adicional = 2
+        self._bs_adicional = 2.0
+        self._cant_envases = 0
 
     @property
     def bs_adicional(self):
         return self._bs_adicional
 
-    # Cantidad de envases = cantidad de platos
-    # MODIFICAR AQUI si se cobra por producto o las bebidas no cuentan
     @property
-    def con_envases(self):
-        return self.contar_platos()
+    def cant_envases(self):
+        return self._cant_envases
 
-    # Costo de los envases = envases x costo de cada uno
+    # Envases = platos del pedido (incluye los de dentro de combos)
+    # MODIFICAR AQUI si se cobra por producto o las bebidas no cuentan
     def calcular_costo_envase(self):
-        return round(self.con_envases * self._bs_adicional, 2)
+        self._cant_envases = self.contar_platos()
+        return round(self._cant_envases * self._bs_adicional, 2)
 
-    # El cargo extra son los envases
     def calcular_recargo(self):
         return self.calcular_costo_envase()
