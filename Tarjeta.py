@@ -3,7 +3,6 @@
 # Comisión del 3 % a cargo del cliente.
 # OJO: el delivery NO acepta tarjeta (regla 7).
 # =====================================================
-
 from decimal import Decimal
 from Pago import Pago
 
