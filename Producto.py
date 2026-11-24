@@ -1,8 +1,5 @@
 from abc import ABC, abstractmethod
 
-
-# Producto: clase ABSTRACTA (hereda de ABC y tiene un @abstractmethod).
-# No se puede crear un Producto directo; hay que usar Plato o Bebida.
 class Producto(ABC):
     TODOS_LOS_DIAS = "Todos los dias"
 
