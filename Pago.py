@@ -13,16 +13,13 @@ class Pago(ABC):
         self.monto = monto                 # Usa el setter (valida que sea > 0)
         self.__fecha = date.today()        # Fecha de hoy
         self.__registrado = False          # Todavía no se ha registrado el pago
-
     # ---------- PROPIEDADES (para leer los atributos privados) ----------
     @property
     def pedido(self):
         return self.__pedido
-
     @property
     def monto(self):
         return self.__monto
-
     @monto.setter
     def monto(self, valor):
         valor = Decimal(str(valor))        # Convertimos a Decimal
