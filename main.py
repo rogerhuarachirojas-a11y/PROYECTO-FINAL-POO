@@ -25,6 +25,7 @@ def main():
     # 2. Productos (Plato, Bebida con precio jarra y vaso, y Combo)
     silpancho = Plato("Silpancho Cochabambino", 35.0)
     pique = Plato("Pique Macho", 55.0)
+    #chicharron = Plato("Chicharron", 30.0, disponible="Domingo")
     chicha = Bebida("Chicha Morada", precio=15.0, precio_vaso=5.0, tamano="Jarra", tipo="Natural")
     gaseosa = Bebida("Coca Cola", precio=12.0, precio_vaso=6.0, tamano="Vaso", tipo="Gaseosa")
 

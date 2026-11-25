@@ -6,7 +6,7 @@ class Llevar(Pedido):
     def __init__(self, id_pedido, cliente, fecha=None):
         super().__init__(id_pedido, cliente, fecha)
         # MODIFICAR AQUI si cambia el costo del envase
-        self._bs_adicional = 2.0
+        #self._bs_adicional = 2.0
         self._cant_envases = 0
 
     @property

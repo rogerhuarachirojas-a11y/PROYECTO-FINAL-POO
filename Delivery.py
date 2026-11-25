@@ -57,6 +57,21 @@ class Delivery(Pedido):
             segundos = (hora - self._fecha).total_seconds()
             self._tiempo_duracion = int(segundos // 60)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     # Retraso = mas de 60 minutos; la compensacion es devolver el envio
     # MODIFICAR AQUI si cambia el limite o la compensacion
     def calcular_compensacion(self):
