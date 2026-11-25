@@ -11,6 +11,7 @@ from Local import Local
 from PagoEnQr import PagoEnQR
 from Pedido import Pedido
 from Plato import Plato
+from Producto import Producto
 from Tarjeta import Tarjeta
 
 
@@ -78,3 +79,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

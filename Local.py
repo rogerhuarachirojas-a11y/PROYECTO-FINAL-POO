@@ -34,4 +34,4 @@ class Local(Pedido):
             Local._mesas_ocupadas.remove(self._mesa)
 
     def calcular_recargo(self):
-        return 0
+        return 0# no hay recargo
