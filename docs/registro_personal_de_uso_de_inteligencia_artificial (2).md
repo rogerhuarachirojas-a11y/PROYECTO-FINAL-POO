@@ -1,0 +1,21 @@
+# Registro Personal de Uso de Inteligencia Artificial
+
+**Estudiante:** Jare  
+**Variante:** C  
+**Semana:** 2  
+
+| N.º | Fecha | Herramienta | Tipo de uso (concepto, error, revisión, generación de código) | Consulta textual | Qué acepté | Qué modifiqué y por qué | Archivo o clase | ¿Lo explico sin ayuda? (Sí, Parcial, No) |
+| :-: | :-: | :-: | :-: | :--- | :--- | :--- | :--- | :-: |
+| 1 | 20/11/2026 | Claude | Generación de código / Concepto | "este diagrama de clases para mi proyecto de programación, quiero que me des loa codigos de la parte que me toco es la de pago junto con sus hijas dame el código en lenguaje Python, en donde sea ni tan facil ni muy complicado y complejo cosa que yo pueda entender y explicar a aun nievel principiante pero tan principiante dame el codigo comentado cosa que le pueda entender, y pueda llamar a otro código que va hacer mi compañero, cosa que estén conectados y funciones óptimamente es para un restaurante, y que el nombre de las variables esten con el mismo del pdf recuerda ponle como esta en el pdf" | La estructura base de la clase abstracta Pago y sus hijas (Efectivo, PagoEnQR, Tarjeta) junto con la explicación de cada método y atributo según el diagrama | Separé cada clase en su propio archivo, ajusté nombres de variables/métodos y encapsulamiento según las reglas del proyecto y lo conecté con la clase Pedido | Pago.py, Efectivo.py, PagoEnQr.py, Tarjeta.py | Sí |
+| 2 | 20/11/2026 | Claude | Concepto / Revisión | "Verificar que la ia, haya dado lo correcto tengo una pregunta es normal que sean los codigos cortos" | La explicación de por qué las clases hijas son cortas gracias a la herencia en Pago y al principio de responsabilidad única | Revisé cada método y atributo contra el diagrama de clases del PDF para verificar que no faltara ninguna validación ni regla de negocio | Pago.py, Efectivo.py, PagoEnQr.py, Tarjeta.py | Sí |
+| 3 | 20/11/2026 | Gemini | Revisión / Generación de código | "mira tenemos eso avanzado pero sabemos que no funcionara devuelve en otro zip con todos los códigos okay para que funcione recuerda es por separado, que tenga la lógica que ya tenemos y si hay códigos que no necesitan cambio mantenlo igual la idea es que funcione no te olvides de mantener los abstract y encapsulamientos donde corresponde" | Los códigos corregidos en formato ZIP manteniendo las clases abstractas, los encapsulamientos y la lógica previa del equipo | Extraje los archivos del ZIP, los integré por separado en el proyecto y ejecuté pruebas reales para verificar que todo funcionara correctamente | Todos los módulos del proyecto | Sí |
+| 4 | 24/11/2026 | Gemini | Concepto | "explícame el código línea por línea de Producto, Plato y Bebida con ejemplos" | El desglose de @property, @abstractmethod, super().__init__ y manejo de errores ValueError | Revisé la lógica de negocio y validé casos con datos correctos e inválidos para dominarlos | Producto.py, Plato.py, Bebida.py | Sí |
+| 5 | 24/11/2026 | Gemini | Concepto | "explícame el código con descripción de Cliente, ProductoPedido y Pedido y cómo validar entradas erróneas" | La explicación de validación de teléfono, rango de cantidad (1–20) y flujo de estados (TRANSICIONES) | Verifiqué el orden de dependencias entre clases y comprobé las reglas de negocio de cada una | Cliente.py, ProductoPedido.py, Pedido.py | Sí |
+| 6 | 24/11/2026 | Gemini | Generación de código / Error | "genera un main de prueba para días disponibles y pruebas unitarias de Plato" | El script de pruebas con assert y la detección del error entre .precio (sin redondear) y .calcular_precio() | Corregí la aserción en main.py usando .calcular_precio() y ejecuté todas las pruebas exitosamente | Plato.py, main.py | Sí |
+| 7 | 24/11/2026 | Gemini | Concepto | "explícame el código línea por línea y con descripción de la clase Pago, sus atributos privados (__) y el control de registro" | El detalle de ROUND_HALF_UP, name mangling (__) y la prevención de cobro duplicado | Completé y verifiqué la misma lógica de validación en las subclases Efectivo, Tarjeta y PagoEnQR | Pago.py, Efectivo.py, Tarjeta.py, PagoEnQr.py | Sí |
+
+---
+
+**Declaración.** Declaro que este registro incluye todos mis usos de IA en el proyecto y que puedo explicar el código que entrego.
+
+**Firma:** ______________________
