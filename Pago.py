@@ -1,5 +1,4 @@
 
-
 from abc import ABC, abstractmethod          # ABC = clase abstracta
 from decimal import Decimal, ROUND_HALF_UP   # Decimal: dinero sin errores
 from datetime import date                    # Fecha del pago

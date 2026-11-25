@@ -1,5 +1,4 @@
 
-
 from decimal import Decimal
 from Pago import Pago            # Traemos la clase padre
 class Efectivo(Pago):
